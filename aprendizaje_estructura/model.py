@@ -106,7 +106,7 @@ def make_predictions(inference):
 
         # Crear un diccionario de evidencias con los datos de cada fila en datos de prueba
         evidence = {variable: row[variable] for variable in row.index if variable!='target'}
-
+        breakpoint()
         # Realizar la inferencia para obtener la CPD de "success" dado la evidencia
         try:
             result = inference.query(variables=['target'], evidence=evidence)
